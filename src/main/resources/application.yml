@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: external-datasource-streams
+  kafka:
+    streams:
+      bootstrap-servers: localhost:9092
+      application-id: external-datasource-streams
