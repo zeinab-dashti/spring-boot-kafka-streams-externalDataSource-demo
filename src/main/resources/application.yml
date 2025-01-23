@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: external-datasource-streams
+  kafka:
+    streams:
+      application-id: external-datasource-streams
+      bootstrap-servers: localhost:9092
+      properties:
+        default.key.serde: 'org.apache.kafka.common.serialization.Serdes$StringSerde'
+        default.value.serde: 'org.apache.kafka.common.serialization.Serdes$StringSerde'
+  h2:
+    console.enabled: true
+    console.path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:localdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
